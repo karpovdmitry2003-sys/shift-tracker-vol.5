@@ -1,0 +1,38 @@
+body {
+  font-family: Arial;
+  background: #0f0f0f;
+  color: white;
+  text-align: center;
+}
+
+.panel button {
+  margin: 5px;
+  padding: 10px;
+}
+
+.rates input {
+  margin: 5px;
+  padding: 8px;
+}
+
+.actions button {
+  margin: 5px;
+  padding: 10px;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.day {
+  background: #222;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.day.day { background: #1f6f3f; }
+.day.night { background: #2b2b6f; }
+.day.off { background: #444; }
