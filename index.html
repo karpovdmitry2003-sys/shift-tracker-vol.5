@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shift Tracker v6</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<h1>📅 Shift Tracker v6</h1>
+
+<div class="panel">
+<button onclick="addShift('day')">☀️ День</button>
+<button onclick="addShift('night')">🌙 Ночь</button>
+<button onclick="addShift('off')">⛔ Выходной</button>
+</div>
+
+<div class="rates">
+<input id="dayRate" placeholder="€/час день">
+<input id="nightRate" placeholder="€/час ночь">
+</div>
+
+<div class="actions">
+<button onclick="enableNotifications()">🔔 Уведомления</button>
+<button onclick="exportCSV()">📤 CSV</button>
+</div>
+
+<h2>💰 Статистика</h2>
+<p id="totalHours"></p>
+<p id="totalMoney"></p>
+
+<h2>📅 Календарь</h2>
+<div id="calendar"></div>
+
+<script src="storage.js"></script>
+<script src="calendar.js"></script>
+<script src="stats.js"></script>
+<script src="export.js"></script>
+<script src="app.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
